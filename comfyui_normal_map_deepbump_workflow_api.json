@@ -1,0 +1,48 @@
+{
+  "2": {
+    "inputs": {
+      "mode": "Color to Normals",
+      "color_to_normals_overlap": "SMALL",
+      "normals_to_curvature_blur_radius": "SMALLEST",
+      "normals_to_height_seamless": true,
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Deep Bump (mtb)",
+    "_meta": {
+      "title": "Deep Bump (mtb)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filepath": "Front",
+      "linear_to_sRGB": true,
+      "image_load_cap": 0,
+      "skip_first_images": 0,
+      "select_every_nth": 1
+    },
+    "class_type": "LoadEXR",
+    "_meta": {
+      "title": "Load EXR"
+    }
+  },
+  "6": {
+    "inputs": {
+      "filename_prefix": "Result",
+      "sRGB_to_linear": true,
+      "version": 1,
+      "start_frame": 1001,
+      "frame_pad": 4,
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SaveEXR",
+    "_meta": {
+      "title": "Save EXR"
+    }
+  }
+}
